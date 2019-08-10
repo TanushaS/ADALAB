@@ -4,21 +4,36 @@
 using namespace std;
 int main(int argc, char **argv)
 {
-	int n;
-	cout<<"Enter the number of integers";
-	cin>>n;
-	int ar[n]={0};
-	cout<<"\nEnter the integers\n";
-	for(int i=0;i<n;i++)
-		cin>>ar[i];
-	int max=-9999;
-	for(int i=0;i<n;i++)
-		{if(ar[i]>max)
+	int t;
+	cout<<"Enter the number of test cases\n";
+	cin>>t;
+	for(int i=0;i<t;i++)
+	{
+		int n,k,f=0;
+		cout<<"Enter number of integers\n";
+		cin>>n;
+		cout<<"Enter the number to be found\n";
+		cin>>k;
+		int ar[n]={0};
+		cout<<"Enter the integers\n";
+		for(int j=0;j<n;j++)
+			cin>>ar[j];
+		int b=0,e=n-1,m=(e+b)/2;
+		while(b<e)
 		{
-			max=ar[i];
+			if(ar[m]==k)
+				{cout<<"1";
+				f=1;
+				break;
+				}
+			else if(ar[m]>k)
+				e=m-1;
+			else
+				b=m+1;
+			m=(e+b)/2;
 		}
-		}
-	cout<<"Maximum of the integers is:";
-	cout<<max;
+		if(f==0)
+			cout<<"-1";
+	}
 	return 0;
 }
