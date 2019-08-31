@@ -1,7 +1,10 @@
-
+m=0
 def merge(b,c,a):
     i,j,k=0,0,0
     while(i<len(b) and j<len(c)):
+        
+        global m
+        m+=1
         if b[i]<c[j]:
             a[k]=b[i]
             i+=1
@@ -30,5 +33,6 @@ arr=list(map(int,input('Enter the elements').split()))
 print("Sorted Array:")
 mergesort(arr)
 print(arr)
+print(m)
         
         
