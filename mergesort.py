@@ -33,6 +33,6 @@ arr=list(map(int,input('Enter the elements').split()))
 print("Sorted Array:")
 mergesort(arr)
 print(arr)
-print(m)
+print("Comparisons:",m)
         
         
