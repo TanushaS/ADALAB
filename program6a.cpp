@@ -1,5 +1,4 @@
 #include <stdio.h>
-//#include <conio.h>
 using namespace std;
 int place(int x[], int k)
 {
@@ -14,10 +13,6 @@ return 1;
 }
 void nqueens(int n)
 {
-
-//ANALYSIS AND DESIGN OF ALGORITHM LAB MANUAL
-
-//DEPT OF COMPUTER SCIENCE AND ENGINEERING Page 3
 
 int k,x[20],count=0;
 k=1;
@@ -52,10 +47,8 @@ k--;
 int main()
 {
 int n;
-//clrscr();
 printf("Enter the number of Queens\n");
 scanf("%d",&n);
 nqueens(n);
-//getch();
 return 0;
 }
